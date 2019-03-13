@@ -1,7 +1,7 @@
 // source: https://reactjs.org/docs/handling-events.html
 import React from 'react';
 
-class Toggle extends React.Component {
+class ToggleStateful extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,4 +24,4 @@ class Toggle extends React.Component {
     );
   }
 }
-export default Toggle;
+export default ToggleStateful;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Clock extends Component {
+class ClockStateful extends Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +27,8 @@ export default class Clock extends Component {
 
 const FormattedDate = ({ date }) => (
   <div>
-    <h2>Cello React Stable!</h2>
     <h3>It is {date.toLocaleTimeString()} now.</h3>
   </div>
 );
+
+export default ClockStateful;
