@@ -1,13 +1,18 @@
 import React from 'react';
+import { Flex, Box } from 'rebass';
 
 import { ClockStateful } from './standard';
 import { ClockHooks } from './hooks';
 
 export default () => (
-  <React.Fragment>
-    <h1>Clock Stateful Component</h1>
-    <ClockStateful />
-    <h1>Clock Hooks</h1>
-    <ClockHooks />
-  </React.Fragment>
+  <Flex>
+    <Box p={3} width={1 / 2} color='magenta' bg='black'>
+      <h1>Clock Stateful</h1>
+      <ClockStateful />
+    </Box>
+    <Box p={3} width={1 / 2} color='white' bg='magenta'>
+      <h1>Clock Hooks</h1>
+      <ClockHooks />
+    </Box>
+  </Flex>
 );

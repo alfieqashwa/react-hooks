@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Button } from '../../styles/Button';
+
 class CounterStateful extends Component {
   constructor(props) {
     super(props);
@@ -34,15 +36,20 @@ class CounterStateful extends Component {
     return (
       <div>
         <p>Class Count: {count}</p>
-        <button type='button' disabled={count === 0} onClick={this.handleReset}>
+        <Button
+          reset
+          type='button'
+          disabled={count === 0}
+          onClick={this.handleReset}
+        >
           Reset
-        </button>
-        <button type='button' onClick={this.handleIncrement}>
+        </Button>
+        <Button type='button' onClick={this.handleIncrement}>
           Increment
-        </button>
-        <button type='button' onClick={this.handleDecrement}>
+        </Button>
+        <Button type='button' onClick={this.handleDecrement}>
           Decrement
-        </button>
+        </Button>
       </div>
     );
   }
