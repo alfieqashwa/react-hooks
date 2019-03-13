@@ -1,28 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-class ClockHooks extends Component {
-  constructor(props) {
-    super(props);
+export default function ClockHooks() {
+  const [date, setDate] = useState(new Date());
 
-    this.state = { date: new Date() };
+  function tick() {
+    setDate(new Date());
   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+    return () => clearInterval(timerID);
+  }, []); // 🤔 still not sure...
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({ date: new Date() });
-  }
-
-  render() {
-    const { date } = this.state;
-    return <FormattedDate date={date} />;
-  }
+  return <FormattedDate date={date} />;
 }
 
 const FormattedDate = ({ date }) => (
@@ -30,5 +20,3 @@ const FormattedDate = ({ date }) => (
     <h3>It is {date.toLocaleTimeString()} now.</h3>
   </div>
 );
-
-export default ClockHooks;
