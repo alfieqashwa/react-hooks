@@ -3,7 +3,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import styled, { createGlobalStyle } from 'styled-components';
 import { Box } from 'rebass';
 
-import { Home, Navigation, Counter, Clock, Toggle } from './components';
+import {
+  Home,
+  Navigation,
+  Counter,
+  Clock,
+  Toggle,
+  TicTacToe
+} from './components';
 
 import * as ROUTES from './constants/routes';
 
@@ -30,6 +37,7 @@ function App() {
           <Route path={ROUTES.COUNTER} component={Counter} />
           <Route path={ROUTES.CLOCK} component={Clock} />
           <Route path={ROUTES.TOGGLE} component={Toggle} />
+          <Route path={ROUTES.TICTACTOE} component={TicTacToe} />
         </div>
       </Router>
     </Box>

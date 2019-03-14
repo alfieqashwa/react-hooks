@@ -11,14 +11,17 @@ const StyledLink = styled(Link)`
 
 const Navigation = () => (
   <Flex>
-    <Box p={3} width={1 / 2} color='white' bg='teal'>
+    <Box p={3} width={1 / 4} color='white' bg='teal'>
       <StyledLink to={ROUTES.HOME}>HOME</StyledLink>
     </Box>
-    <Box p={3} width={1 / 2} color='white' bg='teal'>
+    <Box p={3} width={1 / 4} color='white' bg='teal'>
       <StyledLink to={ROUTES.COUNTER}>Counter</StyledLink>
     </Box>
-    <Box p={3} width={1 / 2} color='white' bg='teal'>
+    <Box p={3} width={1 / 4} color='white' bg='teal'>
       <StyledLink to={ROUTES.CLOCK}>Clock</StyledLink>
+    </Box>
+    <Box p={3} width={1 / 4} color='white' bg='teal'>
+      <StyledLink to={ROUTES.TICTACTOE}>TicTacToe</StyledLink>
     </Box>
   </Flex>
 );
