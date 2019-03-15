@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const Nav = styled.nav`
   display: flex;
   justify-content: space-start;
-  border: 10px solid mistyrose;
+  border: 5px solid #9b59b6;
   min-height: '100vh';
 `;
 
 const Box = styled.div`
+  flex: 1;
   color: hotpink;
   font-size: 20px;
   text-align: center;
