@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import styled, { createGlobalStyle } from 'styled-components';
-import { Box } from 'rebass';
 
+import GlobalStyle from './styles/GlobalStyle';
 import {
   Home,
   Navigation,
@@ -14,20 +13,10 @@ import {
 
 import * as ROUTES from './constants/routes';
 
-// const GlobalStyle = createGlobalStyle(`
-//   * { box-sizing: border-box; }
-//   body{ margin: 0; }
-// `);
-
 function App() {
   return (
-    <Box
-      p={4}
-      fontSize={4}
-      width={[1, 1, 1, 1]}
-      color='magenta'
-      bg='papayawhip'
-    >
+    <React.Fragment>
+      <GlobalStyle />
       <Router>
         <div style={{ textAlign: 'center' }}>
           <Navigation />
@@ -40,7 +29,7 @@ function App() {
           <Route path={ROUTES.TICTACTOE} component={TicTacToe} />
         </div>
       </Router>
-    </Box>
+    </React.Fragment>
   );
 }
 
