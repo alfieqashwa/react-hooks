@@ -11,6 +11,7 @@ export default function ClockHooks() {
     const timerID = setInterval(() => tick(), 1000);
     return () => clearInterval(timerID);
   }, []); // 🤔 still not sure...
+  // update: now I'm sure after installed eslint for hooks 😃
 
   return <FormattedDate date={date} />;
 }
